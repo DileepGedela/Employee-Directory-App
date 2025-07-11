@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Directory</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Employee Directory</h1>
+      <button id="add-employee-btn">Add New Employee</button>
+    </header>
+
+    <main>
+      <section id="dashboard">
+        <div class="controls">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search by name or email..."
+          />
+          <div class="filter-sort-controls">
+            <select id="sort-by">
+              <option value="">Sort By...</option>
+              <option value="firstName">First Name</option>
+              <option value="department">Department</option>
+            </select>
+            <button id="filter-btn">Filter</button>
+            <div id="filter-panel" class="hidden">
+              <h3>Filter Employees</h3>
+              <label for="filter-department">Department:</label>
+              <input
+                type="text"
+                id="filter-department"
+                placeholder="e.g., Engineering"
+              />
+              <label for="filter-role">Role:</label>
+              <input
+                type="text"
+                id="filter-role"
+                placeholder="e.g., Software Engineer"
+              />
+              <button id="apply-filter-btn">Apply Filter</button>
+              <button id="clear-filter-btn">Clear Filter</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="employee-list-container" class="employee-grid"></div>
+
+        <div id="pagination-controls">
+          <button id="prev-page-btn" disabled>&lt; Previous</button>
+          <span id="page-info">Page 1 of 1</span>
+          <button id="next-page-btn" disabled>Next &gt;</button>
+          <select id="items-per-page">
+            <option value="5">5 per page</option>
+            <option value="10" selected>10 per page</option>
+            <option value="25">25 per page</option>
+          </select>
+        </div>
+      </section>
+
+      <section id="employee-form" class="hidden">
+        <h2><span id="form-title">Add New Employee</span></h2>
+        <form id="employee-details-form">
+          <input type="hidden" id="employee-id" />
+
+          <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required />
+            <span class="error-message" id="firstName-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required />
+            <span class="error-message" id="lastName-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <span class="error-message" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" required />
+            <span class="error-message" id="department-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="role">Role:</label>
+            <input type="text" id="role" name="role" required />
+            <span class="error-message" id="role-error"></span>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" id="save-employee-btn">Save</button>
+            <button type="button" id="cancel-form-btn">Cancel</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

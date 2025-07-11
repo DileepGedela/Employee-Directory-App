@@ -1,0 +1,73 @@
+/* public/css/responsive.css */
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .employee-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-sort-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #search-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #filter-panel {
+    width: calc(100% - 30px); /* Adjust for padding */
+    right: auto;
+    left: 0;
+    top: 80px; /* Adjust as needed */
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+  }
+
+  #add-employee-btn {
+    width: 100%;
+  }
+
+  .employee-grid {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+  }
+
+  .employee-card {
+    padding: 10px;
+  }
+
+  .form-group input {
+    width: calc(100% - 20px);
+  }
+
+  #pagination-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #pagination-controls button,
+  #items-per-page {
+    flex-basis: 45%; /* Distribute items more evenly */
+  }
+}
