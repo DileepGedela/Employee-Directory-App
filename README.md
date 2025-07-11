@@ -63,7 +63,30 @@ employee-directory-app/
 
 ## Screenshots
 
-Add screenshots of your app in the `screenshots/` directory.
+### Dashboard View
+![Dashboard Screenshot](screenshots/Home.png)
+
+### Add Employee Form
+![Add Employee Form](screenshots/HomeFillData.png)
+
+### Add SuccessFullyEmployedData
+![Add Employee Form](screenshots/SuccessFullyEmployeeData.png)
+
+### Show Data
+![Add Employee Form](screenshots/Data.png)
+
+### Show Data
+![Add Employee Form](screenshots/Show10Data.png)
+
+### Search Input Filter
+![Add Employee Form](screenshots/NameSearchData.png)
+
+### All Filters Appiled
+![Add Employee Form](screenshots/AllFilterData.png)
+
+### Filters Apply to Show Data
+![Add Employee Form](screenshots/FilterApplyData.png)
+
 
 ---
 
